@@ -1,0 +1,12 @@
+[30-May-2020 02:05:34 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/oc47qmg11y0z/public_html/wp-content/themes/slate/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/oc47qmg11y0z/public_html/wp-content/themes/slate/index.php on line 1
+[30-May-2020 13:39:14 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/oc47qmg11y0z/public_html/wp-content/themes/slate/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/oc47qmg11y0z/public_html/wp-content/themes/slate/index.php on line 1
+[31-May-2020 00:57:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/oc47qmg11y0z/public_html/wp-content/themes/slate/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/oc47qmg11y0z/public_html/wp-content/themes/slate/index.php on line 1

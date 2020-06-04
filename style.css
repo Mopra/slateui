@@ -1,0 +1,48 @@
+/*
+Theme Name: Slate
+Author: Anonymous
+Author URI:
+Version: v.1.0.1
+Description: Base theme for Wordpress
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: base
+Tags: one-column, two-columns
+Theme URI:
+Github Theme URI: https://github.com/Mopra/slateui
+*/
+
+
+
+/* UK edits */
+.current_page_item { border-bottom: solid 1px #fff;}/*Replace this with UK active function plzzz*/
+footer .current_page_item { border-bottom: solid 1px #000;}/*Replace this with UK active function plzzz*/
+.uk-navbar { padding:12px; }
+.uk-logo img { width:100px;height:auto; }
+@media(max-width:960px) { .uk-logo img { width:50px; } }
+.uk-light .uk-navbar-nav>li>a, .uk-light .uk-navbar-toggle, .uk-offcanvas-bar .uk-nav-primary>li>a, .uk-offcanvas-bar .uk-close { color: rgba(255,255,255,.8); }
+
+/*Restyle Nav when scroll*/
+.uk-sticky-fixed h2 { display: none; }
+.uk-sticky-fixed h1 { margin:0; }
+
+.uk-sticky-fixed img {
+    width: 50px;
+}
+.uk-sticky-fixed .uk-navbar-item {
+    min-height: 40px;
+    height: 40px;
+}
+.uk-sticky-fixed .uk-navbar-nav>li>a {
+  min-height: 40px;
+  height: 40px;
+}
+.uk-sticky-fixed .uk-navbar-toggle {
+  min-height: 40px;
+  height: 40px;
+}
+
+/*Funktion til at vise/gemme sub menuer */
+/*.sub-menu { display: none; }*/
+/*.active.current_page_item.menu-item-has-children .sub-menu { display: block; }*/
+/*.active.current_page_parent.current_page_ancestor.menu-item-has-children .sub-menu { display: block; }*/

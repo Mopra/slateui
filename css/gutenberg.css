@@ -1,0 +1,51 @@
+/* SLATEUI Style for Gutenberg blocks */
+
+hr { margin:50px 0 50px 0; }
+
+/* latest posts list block */
+ul.wp-block-latest-posts.wp-block-latest-posts__list {
+  margin:0;padding:20px;
+}
+ul.wp-block-latest-posts.wp-block-latest-posts__list li {
+    padding: 20px 0 20px 0;
+}
+ul.wp-block-latest-posts.wp-block-latest-posts__list li a {
+  font-weight: 100;
+  font-size: 1.5rem;
+  padding:20px 20px 0 20px;
+  display: inline-block;
+  white-space: pre-wrap;
+}
+ul.wp-block-latest-posts.wp-block-latest-posts__list li time {
+  padding:3px 20px 0 20px;
+}
+ul.wp-block-latest-posts.wp-block-latest-posts__list li .wp-block-latest-posts__post-excerpt {
+  padding:20px;
+  display: inline-block;
+  white-space: pre-wrap;
+}
+
+/* latest posts grid block */
+
+ul.wp-block-latest-posts.is-grid li a {
+  padding:20px 20px 0 20px;
+}
+ul.wp-block-latest-posts.is-grid li time {
+  padding:3px 20px 0 20px;
+  display: inline-block;
+}
+ul.wp-block-latest-posts.is-grid li .wp-block-latest-posts__post-excerpt {
+  padding:0 20px 20px 20px;
+}
+ul.wp-block-latest-posts li {
+    padding:0;
+    background-color: transparent;
+    transition: all .2s;
+    pointer-events: none; /*Hover child, change parent*/
+}
+ul.wp-block-latest-posts li a {
+    pointer-events: auto;  /*Hover child, change parent*/
+}
+
+
+/*  */
