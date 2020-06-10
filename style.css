@@ -2,7 +2,7 @@
 Theme Name: Slate
 Author: Anonymous
 Author URI:
-Version: v1.0.6
+Version: v1.0.8
 Description: Base theme for Wordpress
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -20,7 +20,10 @@ footer .current_page_item { border-bottom: solid 1px #000;}/*Replace this with U
 .uk-navbar { padding:12px; }
 .uk-logo img { width:100px;height:auto; }
 @media(max-width:960px) { .uk-logo img { width:50px; } }
-.uk-light .uk-navbar-nav>li>a, .uk-light .uk-navbar-toggle, .uk-offcanvas-bar .uk-nav-primary>li>a, .uk-offcanvas-bar .uk-close { color: rgba(255,255,255,.8); }
+
+.topNav .uk-navbar-item h1 { color: #fff; }
+.topNav .uk-navbar-item h2 { color: #fff; }
+.topNav .uk-nav li>a { color: #fff; }
 
 /*Restyle Nav when scroll*/
 .uk-sticky-fixed h2 { display: none; }
@@ -41,6 +44,8 @@ footer .current_page_item { border-bottom: solid 1px #000;}/*Replace this with U
   min-height: 40px;
   height: 40px;
 }
+
+
 
 /*Funktion til at vise/gemme sub menuer */
 /*.sub-menu { display: none; }*/

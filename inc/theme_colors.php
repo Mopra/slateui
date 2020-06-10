@@ -17,13 +17,33 @@ function slate_themeColors_customize_register( $wp_customize ) {
     'transport' => 'refresh',
   ));
 
-  $wp_customize->add_setting('themeColors_default', array(
+  $wp_customize->add_setting('themeColors_standard', array(
     'standard' => '#222',
     'transport' => 'refresh',
   ));
 
+  $wp_customize->add_setting('themeColors_topNav', array(
+    'standard' => '#ffff',
+    'transport' => 'refresh',
+  ));
+
+  $wp_customize->add_setting('themeColors_topNavSub', array(
+    'standard' => '#999',
+    'transport' => 'refresh',
+  ));
+
+  $wp_customize->add_setting('themeColors_footerNav', array(
+    'standard' => '#000',
+    'transport' => 'refresh',
+  ));
+
+  $wp_customize->add_setting('themeColors_pageLinks', array(
+    'standard' => '#1e87f0',
+    'transport' => 'refresh',
+  ));
+
   $wp_customize->add_section('themeColors_standard', array(
-    'title' => __('standard theme colors', 'Slate'),
+    'title' => __('Standard theme colors', 'Slate'),
     'priority' => 30,
   ));
 
@@ -45,10 +65,34 @@ function slate_themeColors_customize_register( $wp_customize ) {
     'settings' => 'themeColors_muted',
   ) ) );
 
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'themeColors_default_control', array(
-    'label' => __('Default Color', 'Slate'),
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'themeColors_standard_control', array(
+    'label' => __('Standard Color', 'Slate'),
     'section' => 'themeColors_standard',
-    'settings' => 'themeColors_default',
+    'settings' => 'themeColors_standard',
+  ) ) );
+
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'themeColors_topNav_control', array(
+    'label' => __('Top Nav Text Color', 'Slate'),
+    'section' => 'themeColors_standard',
+    'settings' => 'themeColors_topNav',
+  ) ) );
+
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'themeColors_topNavSub_control', array(
+    'label' => __('Top Nav Sub Text Color', 'Slate'),
+    'section' => 'themeColors_standard',
+    'settings' => 'themeColors_topNavSub',
+  ) ) );
+
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'themeColors_footerNav_control', array(
+    'label' => __('Footer Nav Text Color', 'Slate'),
+    'section' => 'themeColors_standard',
+    'settings' => 'themeColors_footerNav',
+  ) ) );
+
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'themeColors_pageLinks_control', array(
+    'label' => __('Page Links Text Color', 'Slate'),
+    'section' => 'themeColors_standard',
+    'settings' => 'themeColors_pageLinks',
   ) ) );
 
 }
@@ -66,8 +110,24 @@ function slate_themeColors_customize_css() { ?>
     .uk-navbar-primary { background-color: <?php echo get_theme_mod('themeColors_primary'); ?>; }
     .uk-background-secondary { background-color: <?php echo get_theme_mod('themeColors_secondary'); ?>; }
     .uk-background-muted { background-color: <?php echo get_theme_mod('themeColors_muted'); ?>; }
-    .uk-background-standard { background-color: <?php echo get_theme_mod('themeColors_default'); ?>; }
-    .uk-link, a { color: <?php echo get_theme_mod('themeColors_secondary'); ?>; }
+    .uk-background-default { background-color: <?php echo get_theme_mod('themeColors_standard'); ?>; }
+
+      /*topNav*/
+      .topNav .uk-navbar-item h1 { color: <?php echo get_theme_mod('themeColors_topNav'); ?>; }
+      .topNav .uk-navbar-item h2 { color: <?php echo get_theme_mod('themeColors_topNav'); ?>; }
+      .topNav .uk-nav li>a { color: <?php echo get_theme_mod('themeColors_topNav'); ?>; }
+      .topNav .uk-navbar-dropdown-nav>li>a { color: <?php echo get_theme_mod('themeColors_topNavSub'); ?>; }
+      .uk-navbar-toggle { color: <?php echo get_theme_mod('themeColors_topNav'); ?>; }
+      .uk-offcanvas-bar .uk-nav-primary>li>a { color: <?php echo get_theme_mod('themeColors_topNav'); ?>; }
+      .uk-offcanvas-bar .uk-navbar-dropdown-nav>li>a { color: <?php echo get_theme_mod('themeColors_topNavSub'); ?>; }
+      /*footerNav*/
+      .uk-nav-default>li>a { color: <?php echo get_theme_mod('themeColors_footerNav'); ?>; }
+      .uk-nav li>a { color: <?php echo get_theme_mod('themeColors_footerNav'); ?>; }
+
+      /*pageLinks*/
+      .uk-link, a { color: <?php echo get_theme_mod('themeColors_pageLinks'); ?>; }
+
+
     /*Gutenberg theme edits*/
     ul.wp-block-latest-posts li:hover { background-color: <?php echo get_theme_mod('themeColors_muted'); ?>; }
 

@@ -47,5 +47,13 @@ ul.wp-block-latest-posts li a {
     pointer-events: auto;  /*Hover child, change parent*/
 }
 
+.wp-block-latest-posts__featured-image {
+    margin-top: -20px;
+}
+
+iframe {
+  width:100%;
+}
+
 
 /*  */

@@ -35,6 +35,10 @@ main {
 	padding:5vh;
 }
 
+.blog .uk-container {
+  padding: 10vh 0;
+}
+
 footer {
   padding: 15vh 0;
 }
@@ -48,4 +52,12 @@ footer img {
 address {
 	margin:0;
 	padding: 24px;
+}
+
+
+
+@media (min-width: 992px) {
+	.factory-login .card p {
+		margin-left:25px;
+	}
 }

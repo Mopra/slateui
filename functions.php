@@ -29,3 +29,16 @@ include( get_template_directory() . '/inc/text_blocks.php' );
 
 // Theme colors
 include( get_template_directory() . '/inc/theme_colors.php' );
+
+
+class WPSE_78121_Sublevel_Walker extends Walker_Nav_Menu
+{
+    function start_lvl( &$output, $depth = 0, $args = array() ) {
+        $indent = str_repeat("\t", $depth);
+        $output .= "\n$indent<div class='sub-menu-wrap uk-navbar-dropdown'><ul class='sub-menu uk-nav uk-navbar-dropdown-nav'>\n";
+    }
+    function end_lvl( &$output, $depth = 0, $args = array() ) {
+        $indent = str_repeat("\t", $depth);
+        $output .= "$indent</ul></div>\n";
+    }
+}
